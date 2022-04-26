@@ -1,0 +1,172 @@
+{% extends 'main/maine.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  
+</head>
+<body>
+
+</body>
+</html>
+
+<html>
+
+
+
+
+
+<!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.0.0/mdb.min.css"
+  rel="stylesheet"
+/>
+<head>  
+  
+<style>
+body {
+
+        background-image: url('/static/images/login.jpeg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    
+}
+p.center {
+  text-align: center;
+  color:#A569BD ;
+}
+
+p.large {
+  font-size: 300%;
+}
+.button {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+   right: 20px;
+}
+
+img {
+    float: left;
+    width:  745px;
+    height: 300px;
+    object-fit: cover;
+}
+
+</style>
+    </head>
+
+    <body>
+
+<marquee behavior="scroll" bgcolor="MediumPurple" loop="-2" width="30%">
+  <p align="left"></p><i><font color="white"><strong>Welcome to Bujone. We are happy to see you here &#128400</strong> </font></i>
+  </marquee> 
+        
+        <blockquote class="blockquote">
+  <p><font color = #A569BD></font>
+    <p align="left"></p><i><font color="purple">You can write to your Journal, Login to your account and if you don't have an account Join us! </font></i>
+    
+  </p>
+</blockquote>
+
+      
+        
+
+       
+        
+<p class="center large">B U J O N E &#9732 </p>
+
+ <hr>
+<div class="row row-cols-1 row-cols-md-2 g-4">
+<div class="col">
+    
+
+        <div class="card border border-info" style="width: 500" style="height:500">
+            
+            <div class="card-header" >
+              <span style="background-color: Thistle">What's Our Aim?</span>
+            </div>
+            <div class="card-body text-secondary">
+              
+              <p class="card-text">Our aim is to help you  schedule your life better. If you plan your life it will be easier to keep track of your tasks and finish them on time. Using a bullet jounral helps you doing that. That's why we turned classic bullet journal into a website.</p>
+            
+            </div>
+          </div>
+    
+    </div>
+    
+ 
+    
+        <div class="col">
+
+
+        <div class="card border border-info" style="width:200" style="height:600">
+            
+            <div class="card-header" >
+              <span style="background-color: Thistle">Advantages Of Being A Member</span>
+            </div>
+            <div class="card-body text-secondary">
+              
+              <p class="card-text">The members can save their journals and return to read them anytime they want! If you are not a member you can still use bujone but your journal will not be saved. If you don't want to lost your bujo <a href="/join">join</a> us now!</p>
+            
+            </div>
+          </div>
+          </div>
+
+    
+ 
+ 
+
+ <div class="col">
+ 
+<div class="card border border-info" style="width: 500" style="height:500">
+  <img src='/static/images/logo.jpg' alt="journal"/>
+  <div class="card-body text-secondary">
+    <h5 class="card-title">Journal</h5>
+    <p class="card-text">
+      Start writing to your journal!
+    </p>
+    <a href='/journal' class="btn btn-primary">Go!</a>
+  </div>
+  </div>
+  </div>
+
+
+
+<div class="col">
+ 
+<div class="card border border-info" style="width: 500" style="height:500">
+  <img src='/static/images/todolist1.jpg' alt="todolist"/>
+  <div class="card-body text-secondary">
+    <h5 class="card-title">List</h5>
+    <p class="card-text">
+      Start making a list!
+    </p>
+    <a href='/list' class="btn btn-primary">Go!</a>
+</div>
+</div>
+</div>
+</div>
+
+
+
+    </body>
+    
+</html>
+
+{% endblock %}

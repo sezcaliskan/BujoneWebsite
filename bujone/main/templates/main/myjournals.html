@@ -1,0 +1,64 @@
+{% extends 'main/maine.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <style>
+table {
+  width:100%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+#t01 tr:nth-child(even) {
+  background-color: #eee;
+}
+#t01 tr:nth-child(odd) {
+ background-color: #fff;
+}
+#t01 th {
+  background-color: black;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+
+
+<table style="width:100%">
+ {% for des in jrnl_descp %}
+  <tr>
+    <th>{{ des.title}}</th>
+  <tr>
+  
+
+
+  <tr>
+    <td>{{ des.desc}}</td>
+  <tr>
+
+{% endfor %}
+  
+</table>
+
+
+
+
+<footer class="container-fluid text-center">
+  
+</footer>
+
+</body>
+</html>
+{% endblock %}

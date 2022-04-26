@@ -1,0 +1,122 @@
+{% extends 'main/maine.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+table {
+  width:100%;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+#t01 tr:nth-child(even) {
+  background-color: #eee;
+}
+#t01 tr:nth-child(odd) {
+ background-color: #fff;
+}
+#t01 th {
+  background-color: black;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<table>
+  {% for des in jrnl_descp %}
+  <tr>
+    <th>{{ des.title}}</th>
+    
+  </tr>
+  <tr>
+    <td>{{ des.desc}}</td>
+    
+  </tr>
+{% endfor %}
+</table>
+<a href='/myjournals' class="btn btn-primary">JournalContens</a>
+
+
+<div class="container"> 
+   
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          journal name
+        </div>
+        <div class="panel-body"><img src=/static/images/journal.png class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">info <a href='/journal' class="btn btn-primary">Go!</a></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-danger">
+        <div class="panel-heading">journal name</div>
+        <div class="panel-body"><img src="/static/images/journal.png" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">some info <a href='/journal' class="btn btn-primary">Go!</a></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-success">
+        <div class="panel-heading">journal name</div>
+        <div class="panel-body"><img src="/static/images/journal.png" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">some info <a href='/journal' class="btn btn-primary">Go!</a></div>
+      </div>
+    </div>
+  </div>
+</div><br>
+
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">journal name</div>
+        <div class="panel-body"><img src="/static/images/journal.png" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">some info <a href='/journal' class="btn btn-primary">Go!</a></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">journal name</div>
+        <div class="panel-body"><img src="/static/images/journal.png" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">some info <a href='/journal' class="btn btn-primary">Go!</a></div>
+      </div>
+    </div>
+    <div class="col-sm-4"> 
+      <div class="panel panel-primary">
+        <div class="panel-heading">journal name</div>
+        <div class="panel-body"><img src="/static/images/journal.png" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer"> info <a href='/journal/' class="btn btn-primary">Go!</a></div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div><br><br>
+
+<footer class="container-fluid text-center">
+  
+</footer>
+
+</body>
+</html>
+{% endblock %}
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title></title>
+
+    </div>
+  </div>
+</nav>
+</head>
+<body>
+ <nav class="navbar navbar-light" style="background-color: #d2b2e5;">
+  <a class="navbar-brand" href="#">Bujone</a>
+  
+
+
+    <div class="navbar-nav">
+      
+
+<p align="right"> 
+      <button type="button" class="btn btn-outline-primary">
+        <a href="/">Home</a></button> 
+       <button type="button" class="btn btn-outline-primary">
+        <a href="/login">Login</a></button> 
+       <button type="button" class="btn btn-outline-primary">
+        <a href="/join">Join</a></button> 
+        <button type="button" class="btn btn-outline-primary">
+        <a href="/profile">Profile</a></button> 
+        <button type="button" class="btn btn-outline-primary">
+        <a href="/aboutus">About Us</a></button> 
+
+        
+     
+   
+  </div>
+
+ <span class="hello-msg">
+  {% if user.is_authenticated %}
+  Hello, {{request.user}}
+  <a  class="hello-msg" href="{% url 'logoutt' %}">Logout</a>
+  {% else %}
+  <p>You are not logged in <a href="{% url 'login' %}">Log In</a> </p>
+  
+{% endif %}
+  
+</span>
+</nav>
+</body>
+</html>
+
+ 
+
+
+

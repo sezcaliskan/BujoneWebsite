@@ -1,0 +1,133 @@
+{% extends 'main/maine.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+      <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ToDo App</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    
+    <link href="/static/css/flatly.min.css" rel="stylesheet" type="text/css" />
+    <link href="/static/css/styles.css" rel="stylesheet" type="text/css" />
+<style>
+
+p.center {
+  text-align: center;
+  color:#87CEFA;
+}
+p.centert {
+  text-align: center;
+  color: #EC8F8F;
+}
+p.right {
+  text-align: right-top;
+  color: #EC8F8F;
+}
+
+p.large {
+  font-size: 300%;
+}
+.button {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+   right: 20px;
+   size: 100px;
+}
+
+</style>
+</head>
+<body>
+<div>
+    <body style="background-color:HoneyDew;">
+   
+    <marquee> <p align="center"></p><i><font color="#BC8F8F"><strong> Take up one idea </strong> </font></i>
+  </marquee> 
+  
+    
+   
+       
+    <p class="centert large">I D E A S &#9732 </p> 
+     <p class="centert  ">Ideas are the beginning points of all fortunes   </p> 
+
+
+
+<div class="container-fluid" id="wrapper">
+      
+      <div class="row">
+        <div class="col-lg-4 col-lg-offset-4" id="content">
+          <h2>What's on your mind today?</h2>
+          
+          <form action="{% url 'addidea' %}" method="POST" role="form">
+            {% csrf_token %}
+            <div class="form-group">
+              <div class="input-group">
+                {{ form.text }}
+                <span class="input-group-btn">
+                  <button type="submit" class="btn btn-default" id="add-btn">ADD</button>
+                </span>
+              </div>
+            </div>
+          </form>
+
+          <div class="row t10">
+            <div class="col-lg-12">
+              <div class="btn-toolbar">
+                <div class="btn-group">
+                  <a href="{% url 'deletecompletedidea' %}"><button type="button" class="btn btn-warning">
+                    <i class="glyphicon glyphicon-trash"></i> DELETE CLICKED
+                  </button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <ul class="list-group t20">
+            {% for idea in idea_list %}
+              {% if idea.complete %}
+              <li class="list-group-item idea-completed">{{ idea.text }}</li>
+            {% else %}
+            <a href="{% url 'completeidea' idea.id %}"><li class="list-group-item ">{{ idea.text }}</li></a>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+      <footer>
+        <div class="row pad">
+          <div class="col-lg-12 text-center">
+            
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+      <footer>
+        <div class="row pad">
+          <div class="col-lg-12 text-center">
+            
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+
+             
+
+
+</body>
+</html>
+{% endblock %}
